@@ -1,0 +1,48 @@
+{
+  "name": "room-reservation",
+  "version": "1.0.0",
+  "description": "A Node.JS Test for TuG.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel -d ./build ./src -s",
+    "clean": "rimraf ./build",
+    "start:dev": "nodemon --watch app -e js ./src/app.js --exec babel-node -e js",
+    "start:prod": "node ./build/app.js",
+    "start": "npm-run-all -s build start:prod"
+  },
+  "keywords": [],
+  "author": "Harold Espinoza <haroldesptru@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-wildcard": "^7.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/runtime": "^7.17.8",
+    "@babel/runtime-corejs2": "^7.17.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-useragent": "^1.0.15",
+    "fs-extra": "^10.0.1",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mime-types": "^2.1.35",
+    "mysql2": "^2.3.3",
+    "node-emoji": "^1.11.0",
+    "sequelize": "^6.17.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.6.0"
+  }
+}
