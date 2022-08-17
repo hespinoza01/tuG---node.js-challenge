@@ -12,6 +12,16 @@ const db = new Sequelize(DB.NAME, DB.USER, DB.PASS, {
     },
     logging: false,
     timezone: '-06:00',
+    define: {
+        freezeTableName: true,
+        timestamps: true,
+    },
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000,
+    },
 })
 
 export default db

@@ -1,8 +1,8 @@
 import loader from './loaders'
 import express from 'express'
 import { constants, db } from './config'
-import { api } from './api/index'
-import logger from './logger/index'
+import { api } from './api'
+import logger from './logger'
 
 async function startServer() {
     const app = express()

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel -d ./build ./src -s",
     "clean": "rimraf ./build",
-    "start:dev": "nodemon --watch app -e js ./src/app.js --exec babel-node -e js",
+    "start:dev": "nodemon --watch src -e js ./src/app.js --exec babel-node -e js",
     "start:prod": "node ./build/app.js",
     "start": "npm-run-all -s build start:prod"
   },
