@@ -7,6 +7,9 @@ El proyecto consta de 5 apartados. Usuarios administradores, capaces de gestiona
 
 ## Ejecución
 ```bash
+git clone https://github.com/hespinoza01/tuG---node.js-challenge.git
+cd 'tuG---node.js-challenge'
+cp example.env .env
 $ docker-compose up -d
 ```
 
