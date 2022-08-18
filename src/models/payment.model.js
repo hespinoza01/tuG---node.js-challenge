@@ -18,6 +18,14 @@ PaymentModel.init(
             type: types.DATE,
             defaultValue: types.NOW,
         },
+        ReservationId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
+        PaymentTypeId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
     },
     { sequelize: db, modelName: 'Payment', timestamps: false }
 )

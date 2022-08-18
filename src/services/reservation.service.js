@@ -136,6 +136,22 @@ ReservationService.get = function (id) {
     })
 }
 
+ReservationService.getReservationAmount = function (id) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const reservation = await ReservationService.get(id)
+            const {
+                days,
+                room: { price },
+            } = reservation
+
+            resolve(days * price)
+        } catch (error) {
+            reject(`ReservationService.getReservationAmount: ${error}`)
+        }
+    })
+}
+
 /**
  * List all reservations
  * @returns {Promise<Array>}

@@ -4,6 +4,7 @@ import RoomTypeValidator from './roomType.validator'
 import RoomValidator from './room.validator'
 import PersonValidator from './person.validator'
 import ReservationValidator from './reservation.validator'
+import PaymentValidator from './payment.validator'
 
 export {
     GeneralValidator,
@@ -12,4 +13,5 @@ export {
     RoomValidator,
     PersonValidator,
     ReservationValidator,
+    PaymentValidator,
 }

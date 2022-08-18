@@ -3,6 +3,7 @@ import RoomTypeService from './roomType.service'
 import RoomService from './room.service'
 import PersonService from './person.service'
 import ReservationService from './reservation.service'
+import PaymentService from './payment.service'
 
 export {
     UserService,
@@ -10,4 +11,5 @@ export {
     RoomService,
     PersonService,
     ReservationService,
+    PaymentService,
 }

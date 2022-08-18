@@ -3,6 +3,7 @@ import RoomTypeController from './roomType.controller'
 import RoomController from './room.controller'
 import PersonController from './person.controller'
 import ReservationController from './reservation.controller'
+import PaymentController from './payment.controller'
 
 export {
     UserController,
@@ -10,4 +11,5 @@ export {
     RoomController,
     PersonController,
     ReservationController,
+    PaymentController,
 }
