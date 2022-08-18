@@ -14,7 +14,6 @@ const UserService = {}
 UserService.create = function ({ fullname, email, password }) {
     return new Promise(async (resolve, reject) => {
         try {
-            console.log(fullname)
             const registeredUser = await UserModel.findByEmail(email)
 
             if (registeredUser) {
@@ -129,7 +128,7 @@ UserService.login = function ({ email, password: rawPassword }) {
                 'createdAt',
                 'updatedAt'
             )
-            response.token = await AuthToken.create(response)
+            response.token = await AuthToken.create(response, 0)
 
             resolve(response)
         } catch (error) {

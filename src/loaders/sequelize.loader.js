@@ -11,6 +11,8 @@ import {
     PaymentModel,
     PaymentTypeModel,
 } from '../models'
+import RoomTypeData from '../data/roomsTypes.json'
+import RoomData from '../data/rooms.json'
 
 const { DB } = constants
 const connectionOptions = {
@@ -50,6 +52,22 @@ export default async function (sequelizeInstance) {
         .sync({ alter: false })
         .then(() => {
             logger.info('All models has been created')
+
+            RoomTypeModel.count().then(count => {
+                if (count === 0) {
+                    RoomTypeModel.bulkCreate(RoomTypeData).catch(error =>
+                        logger.error(`RoomTypeModel Init Data: ${error}`)
+                    )
+                }
+            })
+
+            RoomModel.count().then(count => {
+                if (count === 0) {
+                    RoomModel.bulkCreate(RoomData).catch(error =>
+                        logger.error(`RoomModel Init Data: ${error}`)
+                    )
+                }
+            })
         })
         .catch(err => {
             logger.error(err)

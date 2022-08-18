@@ -63,7 +63,6 @@ UserValidator.check = function (data, attributes = []) {
 
             resolve(result)
         } catch (error) {
-            console.log(error)
             reject(`UserValidator.check: ${error}`)
         }
     })

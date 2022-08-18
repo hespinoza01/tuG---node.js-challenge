@@ -15,6 +15,10 @@ RoomModel.init(
             defaultValue: true,
             allowNull: false,
         },
+        RoomTypeId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
     },
     { sequelize: db, modelName: 'Room' }
 )
