@@ -59,7 +59,7 @@ UserService.update = function ({ id, fullname, email, password }) {
 
             resolve(true)
         } catch (error) {
-            reject(`UserService.create: ${error}`)
+            reject(`UserService.update: ${error}`)
         }
     })
 }
@@ -80,7 +80,7 @@ UserService.get = function (id) {
 
             resolve(ommitKey(user.get({ plain: true }), 'password'))
         } catch (error) {
-            reject(`UserService.create: ${error}`)
+            reject(`UserService.get: ${error}`)
         }
     })
 }
@@ -100,7 +100,7 @@ UserService.list = function () {
 
             resolve(users)
         } catch (error) {
-            reject(`UserService.create: ${error}`)
+            reject(`UserService.list: ${error}`)
         }
     })
 }
@@ -132,7 +132,7 @@ UserService.login = function ({ email, password: rawPassword }) {
 
             resolve(response)
         } catch (error) {
-            reject(`UserService.create: ${error}`)
+            reject(`UserService.login: ${error}`)
         }
     })
 }
