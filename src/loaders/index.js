@@ -9,5 +9,15 @@ export default {
     }) {
         await sequelizeLoader(sequelizeInstance)
         await expressLoader(expressApp, expressRoutes)
+
+        global.ommitKey = function (data, ...toOmmit) {
+            const response = { ...data }
+
+            for (let key of toOmmit) {
+                delete response[key]
+            }
+
+            return response
+        }
     },
 }

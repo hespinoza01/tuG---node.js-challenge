@@ -1,7 +1,8 @@
-function v1(path, controller) {
-    return { path: `/api/v1/${path}`, controller }
-}
+import { ApiBuilder } from '../builders'
+import UserRoute from './routes/user'
 
-export const api = () => {
-    return []
-}
+const api = new ApiBuilder()
+
+api.add('/user', UserRoute)
+
+export default api.build()

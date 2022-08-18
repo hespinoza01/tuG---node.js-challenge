@@ -1,7 +1,7 @@
 import loader from './loaders'
 import express from 'express'
 import { constants, db } from './config'
-import { api } from './api'
+import api from './api'
 import logger from './logger'
 
 async function startServer() {
@@ -10,7 +10,7 @@ async function startServer() {
     loader
         .init({
             expressApp: app,
-            expressRoutes: api(),
+            expressRoutes: api,
             sequelizeInstance: db,
         })
         .then(() => {

@@ -47,7 +47,7 @@ export default async function (sequelizeInstance) {
     PaymentModel.belongsTo(PaymentTypeModel)
 
     await sequelizeInstance
-        .sync({ alter: true })
+        .sync({ alter: false })
         .then(() => {
             logger.info('All models has been created')
         })

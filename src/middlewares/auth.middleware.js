@@ -1,5 +1,5 @@
-import { AuthService } from '../services'
 import { ApiResponse } from '../utils'
+import { AuthToken } from '../utils'
 
 export default async (req, res, next) => {
     try {
@@ -11,7 +11,7 @@ export default async (req, res, next) => {
             throw String('auth token not found')
         }
 
-        const decode = await AuthService.checkAuthToken(token)
+        const decode = await AuthToken.decode(token)
 
         req.auth = decode
         next()
