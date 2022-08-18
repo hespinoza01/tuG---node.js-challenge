@@ -14,6 +14,22 @@ ReservationModel.init(
             type: types.INTEGER,
             allowNull: false,
         },
+        UserId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
+        PersonId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
+        RoomId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
+        ReservationStatusId: {
+            type: types.INTEGER,
+            allowNull: false,
+        },
     },
     { sequelize: db, modelName: 'Reservation' }
 )
